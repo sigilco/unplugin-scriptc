@@ -2,6 +2,7 @@ allowBuilds:
   '@docmd/engine-rust': true
   esbuild: true
   scriptc: true
+  workerd: true
 minimumReleaseAgeExclude:
   - scriptc
   - '@scriptc/*'

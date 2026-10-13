@@ -6,13 +6,16 @@ import assert from "node:assert/strict";
 import { mkdtempSync, writeFileSync, existsSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { readDiagnostics, resolveScriptcBin, runScriptc, buildArgs } from "../src/scriptc.ts";
 
 function scriptcAvailable(root: string): boolean {
   try {
-    execFileSync(resolveScriptcBin(root), ["--version"], { stdio: "pipe" });
-    return true;
+    const bin = resolveScriptcBin(root);
+    const probe = join(root, "probe.ts");
+    writeFileSync(probe, 'console.log("ok");\n');
+    const r = spawnSync(bin, ["coverage", probe], { encoding: "utf8" });
+    return r.status === 0;
   } catch {
     return false;
   }
