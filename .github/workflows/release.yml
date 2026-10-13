@@ -13,8 +13,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     # Tag pushes queue here until a required reviewer approves the
-    # "release" environment (repo Settings > Environments).
-    environment: release
+    # npm-publish environment (repo Settings > Environments).
+    environment: npm-publish
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
