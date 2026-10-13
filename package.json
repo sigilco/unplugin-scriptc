@@ -1,0 +1,63 @@
+{
+  "name": "@sigilco/unplugin-scriptc",
+  "version": "0.1.0",
+  "description": "scriptc native compilation for any bundler via unplugin",
+  "keywords": [
+    "scriptc",
+    "unplugin",
+    "vite",
+    "rollup",
+    "webpack",
+    "esbuild",
+    "rolldown",
+    "native",
+    "aot",
+    "compiler"
+  ],
+  "homepage": "https://github.com/sigilco/unplugin-scriptc#readme",
+  "bugs": {
+    "url": "https://github.com/sigilco/unplugin-scriptc/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "Joaquin Terrasa & contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigilco/unplugin-scriptc.git"
+  },
+  "files": [
+    "src"
+  ],
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "oxlint src test",
+    "fmt": "oxfmt src test",
+    "fmt:check": "oxfmt --check src test",
+    "docs:dev": "docmd dev --cwd docs",
+    "docs:build": "docmd build --cwd docs"
+  },
+  "dependencies": {
+    "@docmd/engine-rust": "0.9.7",
+    "unplugin": "^3.4.0"
+  },
+  "peerDependencies": {
+    "scriptc": "0.3.0",
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@docmd/core": "^0.9.7",
+    "@types/node": "^24.0.0",
+    "oxfmt": "^0.17.0",
+    "oxlint": "^1.87.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

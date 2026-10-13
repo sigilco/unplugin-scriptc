@@ -1,0 +1,6 @@
+node_modules/
+dist/
+docs/site/
+.scriptc/
+*.local
+.DS_Store

@@ -1,0 +1,26 @@
+{
+  "title": "unplugin-scriptc",
+  "url": "https://unplugin-scriptc.pages.dev/",
+  "src": ".",
+  "out": "site",
+  "theme": {
+    "primary": "#4f46e5"
+  },
+  "plugins": { "ai": false },
+  "sidebar": [
+    {
+      "title": "Guide",
+      "pages": [
+        { "title": "Introduction", "route": "index" },
+        { "title": "Options", "route": "options" },
+        { "title": "Diagnostics", "route": "diagnostics" }
+      ]
+    },
+    {
+      "title": "Advanced",
+      "pages": [
+        { "title": "Bundler notes", "route": "bundlers" }
+      ]
+    }
+  ]
+}
