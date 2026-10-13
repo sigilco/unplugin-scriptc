@@ -6,13 +6,35 @@ It does one thing: run `scriptc build` on your app entry during the build and su
 
 ## Install
 
+::: tabs
+
+== tab "npm"
+
 ```sh
 npm i -D unplugin-scriptc scriptc
 ```
 
+== tab "pnpm"
+
+```sh
+pnpm add -D unplugin-scriptc scriptc
+```
+
+== tab "bun"
+
+```sh
+bun add -D unplugin-scriptc scriptc
+```
+
+:::
+
 `scriptc` is a peer dependency pinned to `0.3.0`. scriptc evolves fast and changes flags between releases, so the pin is deliberate; upgrade it when you are ready to re-check your build flags.
 
-## Vite
+## Usage
+
+::: tabs
+
+== tab "Vite"
 
 ```ts
 // vite.config.ts
@@ -30,9 +52,7 @@ export default defineConfig({
 });
 ```
 
-## Rollup, Webpack, esbuild, Rolldown
-
-The factory exposes the same `scriptcPlugin.<bundler>()` adapters unplugin provides:
+== tab "Rollup"
 
 ```ts
 // rollup.config.mjs
@@ -42,6 +62,30 @@ export default {
  plugins: [scriptcPlugin.rollup({ entry: "src/main.ts" })],
 };
 ```
+
+== tab "esbuild"
+
+```ts
+// esbuild.config.mjs
+import { scriptcPlugin } from "unplugin-scriptc";
+
+export default {
+ plugins: [scriptcPlugin.esbuild({ entry: "src/main.ts" })],
+};
+```
+
+== tab "Webpack"
+
+```ts
+// webpack.config.mjs
+import { scriptcPlugin } from "unplugin-scriptc";
+
+export default {
+ plugins: [scriptcPlugin.webpack({ entry: "src/main.ts" })],
+};
+```
+
+:::
 
 ## What a build does
 
