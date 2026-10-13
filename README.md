@@ -1,4 +1,4 @@
-# @sigilco/unplugin-scriptc
+# unplugin-scriptc
 
 [scriptc](https://scriptc.dev) native compilation inside any bundler, via [unplugin](https://unplugin.unjs.io). Vite, Rollup, Webpack, esbuild, Rolldown.
 
@@ -7,7 +7,7 @@ The plugin does one thing: run `scriptc build` on your app entry as part of the 
 ## Install
 
 ```sh
-npm i -D @sigilco/unplugin-scriptc scriptc
+npm i -D unplugin-scriptc scriptc
 ```
 
 `scriptc` is a peer dependency pinned to `0.3.0` on purpose: scriptc evolves fast and breaks flags between releases. Upgrade the pin deliberately.
@@ -17,7 +17,7 @@ npm i -D @sigilco/unplugin-scriptc scriptc
 ```ts
 // vite.config.ts
 import { defineConfig } from "vite";
-import { scriptcPlugin } from "@sigilco/unplugin-scriptc";
+import { scriptcPlugin } from "unplugin-scriptc";
 
 export default defineConfig({
  plugins: [

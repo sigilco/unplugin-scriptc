@@ -1,13 +1,13 @@
 # Introduction
 
-`@sigilco/unplugin-scriptc` runs [scriptc](https://scriptc.dev) inside your bundler pipeline through the [unplugin](https://unplugin.unjs.io) factory, so the same plugin works with Vite, Rollup, Webpack, esbuild, and Rolldown.
+`unplugin-scriptc` runs [scriptc](https://scriptc.dev) inside your bundler pipeline through the [unplugin](https://unplugin.unjs.io) factory, so the same plugin works with Vite, Rollup, Webpack, esbuild, and Rolldown.
 
 It does one thing: run `scriptc build` on your app entry during the build and surface `scriptc coverage` diagnostics through the bundler's warning channel. It does not analyze code itself; every reported problem comes from the compiler.
 
 ## Install
 
 ```sh
-npm i -D @sigilco/unplugin-scriptc scriptc
+npm i -D unplugin-scriptc scriptc
 ```
 
 `scriptc` is a peer dependency pinned to `0.3.0`. scriptc evolves fast and changes flags between releases, so the pin is deliberate; upgrade it when you are ready to re-check your build flags.
@@ -17,7 +17,7 @@ npm i -D @sigilco/unplugin-scriptc scriptc
 ```ts
 // vite.config.ts
 import { defineConfig } from "vite";
-import { scriptcPlugin } from "@sigilco/unplugin-scriptc";
+import { scriptcPlugin } from "unplugin-scriptc";
 
 export default defineConfig({
  plugins: [
@@ -36,7 +36,7 @@ The factory exposes the same `scriptcPlugin.<bundler>()` adapters unplugin provi
 
 ```ts
 // rollup.config.mjs
-import { scriptcPlugin } from "@sigilco/unplugin-scriptc";
+import { scriptcPlugin } from "unplugin-scriptc";
 
 export default {
  plugins: [scriptcPlugin.rollup({ entry: "src/main.ts" })],

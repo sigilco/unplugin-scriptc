@@ -1,6 +1,6 @@
 # Agent guide
 
-unplugin wrapper that runs `scriptc build` inside bundler pipelines and surfaces `scriptc coverage` diagnostics. Single package, published as `@sigilco/unplugin-scriptc`.
+unplugin wrapper that runs `scriptc build` inside bundler pipelines and surfaces `scriptc coverage` diagnostics. Single package, published as `unplugin-scriptc`.
 
 ## Layout
 

@@ -1,4 +1,4 @@
-// @sigilco/unplugin-scriptc -- scriptc native compilation inside any bundler
+// unplugin-scriptc -- scriptc native compilation inside any bundler
 // via the unplugin framework. One responsibility: run `scriptc build` on the
 // app entry with the user's flag surface, and surface `scriptc coverage`
 // diagnostics through the bundler's warning/error channel.

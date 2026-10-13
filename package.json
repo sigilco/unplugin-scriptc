@@ -1,5 +1,5 @@
 {
-  "name": "@sigilco/unplugin-scriptc",
+  "name": "unplugin-scriptc",
   "version": "0.1.0",
   "description": "scriptc native compilation for any bundler via unplugin",
   "keywords": [
