@@ -36,7 +36,7 @@ export interface ScriptcBuildOptions {
   ffi?: string[];
   // --npm-static: "auto" opts every eligible direct import in; a string list
   // names packages explicitly (each entry becomes one flag). Eligible
-  // dependencies already compile automatically in v0.3.0.
+  // dependencies already compile automatically in v0.3.x.
   npmStatic?: "auto" | string[];
   // --provenance-sources: compile npm deps from provenance-attested source.
   provenanceSources?: boolean;

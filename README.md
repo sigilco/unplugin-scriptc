@@ -10,7 +10,7 @@ The plugin does one thing: run `scriptc build` on your app entry as part of the 
 npm i -D unplugin-scriptc scriptc
 ```
 
-`scriptc` is a peer dependency pinned to `0.3.0` on purpose: scriptc evolves fast and breaks flags between releases. Upgrade the pin deliberately.
+`scriptc` is a peer dependency pinned to `^0.3.0`: it accepts any 0.3.x release, so patch and bug-fix releases flow through without a plugin bump, but the next minor (0.4.0) is an explicit upgrade. The plugin only relies on the `scriptc build` flag surface and the v1 diagnostics JSON envelope, both stable within the 0.3 line.
 
 ## Usage
 

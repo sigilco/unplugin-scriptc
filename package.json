@@ -1,6 +1,6 @@
 {
   "name": "unplugin-scriptc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "scriptc native compilation for any bundler via unplugin",
   "keywords": [
     "scriptc",
@@ -47,7 +47,7 @@
     "unplugin": "^3.4.0"
   },
   "peerDependencies": {
-    "scriptc": "0.3.0",
+    "scriptc": "^0.3.0",
     "typescript": ">=5.0.0"
   },
   "devDependencies": {
