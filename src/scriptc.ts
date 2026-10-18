@@ -15,6 +15,10 @@ export interface ScriptcBuildOptions {
   out?: string;
   // --emit: primary output kind (default exe). asm/obj need a platform helper.
   emit?: "ir" | "llvm" | "asm" | "obj" | "exe";
+  // --print: machine-readable metadata instead of the output path.
+  // native-link-info implies --emit=obj and never links; diagnostics prints
+  // the versioned JSON diagnostics envelope.
+  print?: "native-link-info" | "diagnostics";
   // --backend: code generator (llvm).
   backend?: string;
   // --optimization: release (default, -O2), dev (-O0 + breakpoints + cached
@@ -59,6 +63,7 @@ export function buildArgs(o: ScriptcBuildOptions, entry: string): string[] {
   a.push(entry);
   if (o.out !== undefined) a.push("--out", o.out);
   if (o.emit !== undefined) a.push("--emit", o.emit);
+  if (o.print !== undefined) a.push("--print", o.print);
   if (o.backend !== undefined) a.push("--backend", o.backend);
   if (o.optimization !== undefined) a.push("--optimization", o.optimization);
   if (o.strip === true) a.push("--strip");

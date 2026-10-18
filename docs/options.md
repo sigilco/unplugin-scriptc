@@ -19,6 +19,7 @@ Every `scriptc build` flag of the pinned release maps to a typed option. Flags a
 | --- | --- | --- |
 | `out` | `-o, --out` | Primary output path (default `.scriptc/<name><suffix>`) |
 | `emit` | `--emit` | Primary output: `ir`, `llvm`, `asm`, `obj`, `exe` |
+| `print` | `--print` | `native-link-info` (implies `--emit=obj`, no link) or `diagnostics` |
 | `backend` | `--backend` | Code generator (`llvm`) |
 | `optimization` | `--optimization` | `release` (-O2), `dev` (-O0 + breakpoints), `speed` (runtime inlining, inline RC) |
 | `strip` | `--strip` | Remove symbol/debug payload |

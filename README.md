@@ -48,6 +48,7 @@ On every build the plugin runs `scriptc coverage <entry> --print diagnostics` at
 | `failOnBlockers` | `true` | Fail the bundler build when coverage finds blockers |
 | `out` | `.scriptc/<name><suffix>` | `-o/--out` primary output path |
 | `emit` | `"exe"` | `--emit`: ir, llvm, asm, obj, exe |
+| `print` | , | `--print`: native-link-info or diagnostics |
 | `backend` | , | `--backend` code generator |
 | `optimization` | `"release"` | `--optimization`: release, dev, speed |
 | `strip` | `false` | `--strip` symbol/debug payload |

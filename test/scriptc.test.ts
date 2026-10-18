@@ -47,6 +47,21 @@ test("buildArgs: scalar flags map one-to-one", () => {
   ]);
 });
 
+test("buildArgs: print selects a machine-readable output", () => {
+  assert.deepEqual(buildArgs({ print: "native-link-info" }, "e.ts"), [
+    "build",
+    "e.ts",
+    "--print",
+    "native-link-info",
+  ]);
+  assert.deepEqual(buildArgs({ print: "diagnostics" }, "e.ts"), [
+    "build",
+    "e.ts",
+    "--print",
+    "diagnostics",
+  ]);
+});
+
 test("buildArgs: keepLlvm default emits nothing, true emits --keep-llvm", () => {
   assert.ok(!buildArgs({}, "e.ts").includes("--keep-llvm"));
   assert.ok(!buildArgs({ keepLlvm: false }, "e.ts").includes("--keep-llvm"));
