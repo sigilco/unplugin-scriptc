@@ -43,7 +43,6 @@
     "docs:build": "docmd build --cwd docs"
   },
   "dependencies": {
-    "@docmd/engine-rust": "0.9.7",
     "unplugin": "^3.4.0"
   },
   "peerDependencies": {
@@ -52,6 +51,7 @@
   },
   "devDependencies": {
     "@docmd/core": "^0.9.7",
+    "@docmd/engine-rust": "0.9.8",
     "@types/node": "^24.0.0",
     "oxfmt": "^0.17.0",
     "oxlint": "^1.87.0",
