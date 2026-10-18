@@ -166,9 +166,6 @@ importers:
 
   .:
     dependencies:
-      '@docmd/engine-rust':
-        specifier: 0.9.7
-        version: 0.9.7
       scriptc:
         specifier: ^0.3.0
         version: 0.3.1
@@ -179,6 +176,9 @@ importers:
       '@docmd/core':
         specifier: ^0.9.7
         version: 0.9.7
+      '@docmd/engine-rust':
+        specifier: 0.9.8
+        version: 0.9.8
       '@types/node':
         specifier: ^24.0.0
         version: 24.19.2
@@ -217,6 +217,10 @@ packages:
 
   '@docmd/engine-rust@0.9.7':
     resolution: {integrity: sha512-7oYVUmwCKkuEOH+8qI8C6OyVtmZapnkNWeQbsFCwYjDzjNL+z2prX68Vuo0+hJDxJ9jBYBvdipG0EUx3SgZQ9w==}
+    engines: {node: '>=20.0.0'}
+
+  '@docmd/engine-rust@0.9.8':
+    resolution: {integrity: sha512-wph3cuTZMYADBDAAAXfuM6Sz2itkC+lx4RwRcVYzdG9yDOFAYidzU552VO3plbuDzUaJUxUWnsj55x//0gLOFA==}
     engines: {node: '>=20.0.0'}
 
   '@docmd/live@0.9.7':
@@ -946,7 +950,10 @@ snapshots:
   '@docmd/engine-python@0.9.7':
     optional: true
 
-  '@docmd/engine-rust@0.9.7': {}
+  '@docmd/engine-rust@0.9.7':
+    optional: true
+
+  '@docmd/engine-rust@0.9.8': {}
 
   '@docmd/live@0.9.7':
     dependencies:
